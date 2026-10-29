@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Group Finder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Study Group Finder</h1>
+    <p id="api-status" class="status" data-status="connected">Checking API...</p>
+  </header>
+  
+  <main>
+    <section class="filters">
+      <label for="search">Search by name</label>
+      <input type="text" id="search">
+      
+      <label for="subject-filter">Subject</label>
+      <select id="subject-filter">
+        <option value="">All</option>
+      </select>
+    </section>
+    
+    <h2>Groups</h2>
+    <p id="message" class="message" data-type="error"></p>
+    
+    <ul id="groups-list" class="list"></ul>
+    
+    <div class="pagination">
+      <button id="previous">Previous</button>
+      <span id="current-page"></span>
+      <button id="next">Next</button>
+    </div>
+    
+    <h2 id="form-title">New group</h2>
+    <form id="group-form">
+      <label for="name">Group Name</label>
+      <input type="text" id="name">
+      <p id="error-name" class="field-error"></p>
+      
+      <label for="subject">Subject</label>
+      <select id="subject"></select>
+      <p id="error-subject" class="field-error"></p>
+      
+      <label for="limit">Participant Limit</label>
+      <input type="number" id="limit" value="10">
+      <p id="error-limit" class="field-error"></p>
+      
+      <label for="description">Description (optional)</label>
+      <textarea id="description"></textarea>
+      <p id="error-description" class="field-error"></p>
+      
+      <div class="form-actions">
+        <button id="save" type="submit">Save</button>
+        <button id="cancel" type="button" class="secondary" hidden>Cancel edit</button>
+      </div>
+    </form>
+  </main>
+  
+  <script type="module" src="app.js"></script>
+</body>
+</html>
