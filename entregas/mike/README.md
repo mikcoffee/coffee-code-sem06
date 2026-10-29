@@ -1,4 +1,4 @@
-# Study Group Finder
+# Learning Platform
 
 A full-stack web application to list, search, create, edit, and delete study groups. 
 - **Backend:** FastAPI (Python)
